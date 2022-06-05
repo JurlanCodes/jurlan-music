@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Music</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/music.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="header_content d-flex flex-row align-items-center justify-content-center">
+      <div class="logo"><a href="#">jurlaNMusic</a></div>     <nav class="main_nav">
+        <ul class="d-flex flex-row align-items-start justify-content-start">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a style="color: aqua; font-weight: bold; background: #525252;" href="music.html">Music</a></li>
+          <li><a href="blog.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger ml-auto">
+        <div class="d-flex flex-column align-items-end justify-content-between">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu -->
+
+  <div class="menu">
+    <div>
+      <div class="menu_overlay"></div>
+      <div class="menu_container d-flex flex-column align-items-start justify-content-center">        <nav class="menu_nav">
+          <ul class="d-flex flex-column align-items-start justify-content-start">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="blog.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Music Player -->
+
+    <div class="main">
+    <p id="logo"><i class="fa fa-music"></i>DjJurlan Music</p>
+    
+        <!-- show_song_number -->
+        <div class="show_song_no">
+          <p id="present">1</p>
+          <p>/</p>
+          <p id="total">5</p>
+        </div>
+
+
+    <!--- left part --->
+     <div class="left">
+
+      <!--- song img --->
+      <img id="track_image">
+         <div class="volume">
+            <p id="volume_show">90</p>
+            <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+         </div>
+
+     </div>
+ 
+     <!--- right part --->
+     <div class="right">
+       <!--- song title & artist name --->
+       <div class="song_detail">
+           <p id="title">title.mp3</p>
+           <p id="artist">Artist name</p>
+       </div>
+
+      <!--- middle part --->
+      <div class="middle">
+           <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+           <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+           <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+       </div>
+
+       <!--- song duration part --->
+        <div class="duration">
+           <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+           <button id="auto" onclick="autoplay_switch()">Auto &nbsp;<i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+        </div>
+           
+    </div>
+
+
+  </div>
+
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="footer_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+      <div class="newsletter_container">
+        <div class="newsletter_title"><h2>Subscribe Me on YOUTUBE</h2></div>
+          <a href="https://www.youtube.com/channel/UC08LLvvShna-hOxVJStycWw">
+            <button class="newsletter_button">Subscribe</button>
+          </a>
+      </div>
+      <div class="footer_lists d-flex flex-sm-row  flex-column align-items-start justify-content-start ml-xl-auto">
+
+        <!-- Useful Links -->
+        <div class="footer_list">
+          <div class="footer_list_title">Useful Links</div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="blog.html">News</a></li>
+          </ul>
+        </div>
+
+        <!-- DjJurlan Remix -->
+        <div class="footer_list">
+          <div class="footer_list_title">DjJurlan</div>
+          <ul>
+            <li><a href="https://web.facebook.com/1999djjurlanremix?_rdc=1&_rdr">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@djjurlanremix?is_from_webapp=1&sender_device=pc">Tiktok</a></li>
+            <li><a href="https://www.youtube.com/channel/UC08LLvvShna-hOxVJStycWw">Youtube</a></li>
+            <li><a href="https://web.facebook.com/djjurlanremix">Facebook Page</a></li>
+            <li><a href="https://soundcloud.com/user-588084427">SoundCloud</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div class="copyright_bar">
+      <span>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://web.facebook.com/1999djjurlanremix" target="_blank">Jurlan Sin-ingan</a>
+</span>
+    </div>
+  </footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap-4.1.2/popper.js"></script>
+<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/progressbar/progressbar.min.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/jPlayer/jquery.jplayer.min.js"></script>
+<script src="plugins/jPlayer/jplayer.playlist.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/music.js"></script>
+
+</body>
+</html>
